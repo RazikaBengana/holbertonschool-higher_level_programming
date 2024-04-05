@@ -1,0 +1,44 @@
+# test the function ``text_indentation``
+test with the command ./5-main.py | cat -e
+
+============================================================================
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+============================================================================
+
+SUCCESS CASES:
+
+
+Test string
+
+>>> text_indentation("Hi everyone? This is: an exercise made with Python")
+Hi everyone?
+<BLANKLINE>
+This is:
+<BLANKLINE>
+an exercise made with Python
+
+>>> text_indentation("School")
+School
+
+
+
+
+
+CASES ON FAILURE:
+
+
+Test with no text
+
+>>> text_indentation()
+Traceback (most recent call last):
+...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+
+
+>>> text_indentation(1234)
+Traceback (most recent call last):
+...
+TypeError: text must be a string

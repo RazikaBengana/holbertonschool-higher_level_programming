@@ -1,0 +1,66 @@
+# Test the function ``lazy_matrix_mul``
+test with the command python3 -m doctest -v ./tests/100-lazy_matrix_mul.txt
+
+============================================================================
+
+>>> lazy_matrix_mul = __import__('lazy_matrix_mul').lazy_matrix_mul
+
+============================================================================
+
+SUCCESS CASES:
+
+
+Test multiplication of two square matrices
+
+>>> lazy_matrix_mul([[1, 2], [3, 4]], [[5, 6], [7, 8]])
+matrix([[19, 22],
+        [43, 50]])
+
+
+
+Test multiplication of rectangular matrices
+
+>>> lazy_matrix_mul([[1, 2, 3], [4, 5, 6]], [[7, 8], [9, 10], [11, 12]])
+matrix([[ 58,  64],
+        [139, 154]])
+
+
+
+
+
+CASES ON FAILURE:
+
+
+Test with scalar values
+
+>>> lazy_matrix_mul(1, [[1, 2], [3, 4]])
+Traceback (most recent call last):
+...
+TypeError: Scalar operands are not allowed, use '*' instead
+
+
+
+Test with non-rectangular matrices
+
+>>> lazy_matrix_mul([[1, 2], [3, 4, 5]], [[5, 6], [7, 8]])
+Traceback (most recent call last):
+...
+ValueError: setting an array element with a sequence.
+
+
+
+Test with non-numeric values in matrices
+
+>>> lazy_matrix_mul([["a", 2], [3, 4]], [[5, 6], [7, 8]])
+Traceback (most recent call last):
+...
+TypeError: invalid data type for einsum
+
+
+
+Test with one matrix empty
+
+>>> lazy_matrix_mul([], [[5, 6], [7, 8]])
+Traceback (most recent call last):
+...
+ValueError: setting an array element with a sequence.

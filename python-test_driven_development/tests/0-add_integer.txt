@@ -1,0 +1,119 @@
+# test the function ``add_integer``
+test with the command python3 -m doctest -v ./tests/0-add_integer.txt
+
+============================================================================
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+============================================================================
+
+SUCCESS CASES:
+
+
+Test with one argument int
+
+>>> add_integer(10)
+108
+
+
+
+Test of two unsigned int
+
+>>> add_integer(4, 5)
+9
+
+
+
+Test of one signed int and one unsigned int
+
+>>> add_integer(-3, 6)
+3
+
+
+
+Test of two signed int
+
+>>> add_integer(-2, -4)
+-6
+
+
+
+Test of one negative float and one signed int
+
+>>> add_integer(-1.5, -1)
+-2
+
+
+
+Test of one positive float and one unsigned int
+
+>>> add_integer(2.5, 4)
+6
+
+
+
+
+
+CASES ON FAILURE:
+
+
+Test with a in None
+
+>>> add_integer(None, 2)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+
+
+Test with a in another type than int
+
+>>> add_integer("hello", 2)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+
+
+Test with b in another type than int
+
+>>> add_integer(1, "school")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+
+
+Test with b in None
+
+>>> add_integer(23, None)
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+
+
+Test with more arguments than required
+
+>>> add_integer(2, 4, 6, 8)
+Traceback (most recent call last):
+...
+TypeError: add_integer() takes from 1 to 2 positional arguments but 4 were given
+
+
+
+Test with an infinite number
+
+>>> add_integer(float("inf"), 5)
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+
+
+
+Test with float NaN (Not a Number)
+
+>>> add_integer(float("NaN"), 8)
+Traceback (most recent call last):
+...
+ValueError: cannot convert float NaN to integer

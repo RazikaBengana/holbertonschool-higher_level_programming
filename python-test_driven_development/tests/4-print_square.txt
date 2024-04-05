@@ -1,0 +1,71 @@
+# test the function ``print_square``
+test with the command python3 -m doctest -v ./tests/4-print_square.txt
+
+============================================================================
+
+>>> print_square= __import__('4-print_square').print_square
+
+============================================================================
+
+SUCCESS CASES:
+
+
+Test with size as integer and > 0
+
+>>> print_square(0)
+
+>>> print_square(5)
+#####
+#####
+#####
+#####
+#####
+
+>>> print_square(1)
+#
+
+
+
+
+
+CASES ON FAILURE:
+
+
+Test with size < 0
+
+>>> print_square(-1)
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
+
+
+
+Test with another type than int
+
+>>> print_square("C")
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+>>> print_square(5.2)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+
+
+Test with no argument
+
+>>> print_square()
+Traceback (most recent call last):
+...
+TypeError: print_square() missing 1 required positional argument: 'size'
+
+
+
+Test with more arguments than required:
+
+>>> print_square(3, 9)
+Traceback (most recent call last):
+...
+TypeError: print_square() takes 1 positional argument but 2 were given
