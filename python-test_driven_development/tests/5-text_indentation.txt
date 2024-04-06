@@ -1,5 +1,5 @@
 # test the function ``text_indentation``
-test with the command ./5-main.py | cat -e
+test with the command python3 -m doctest -v ./tests/5-text_indentation.txt
 
 ============================================================================
 

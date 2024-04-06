@@ -1,4 +1,5 @@
 # test the file 7-base_geometry
+test with the command python3 -m doctest -v ./tests/7-base_geometry.txt
 
 ============================================================================
 
