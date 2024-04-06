@@ -3,6 +3,9 @@
 
 
 import json
+import turtle
+import time
+from random import randrange
 
 
 class Base:
@@ -132,3 +135,38 @@ class Base:
             pass
 
         return json_obj
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """
+        Draws rectangles and squares using the turtle graphics library
+
+        This method iterates over lists of Rectangle and Square objects,
+        drawing each one using a unique color and specified dimensions and position
+
+        Args:
+            list_rectangles (list): A list of Rectangle objects to be drawn
+            list_squares (list): A list of Square objects to be drawn
+        """
+
+        turtle.Screen().colormode(255)
+
+        for i in list_rectangles + list_squares:
+            t = turtle.Turtle()
+            t.color((randrange(255), randrange(255), randrange(255)))
+            t.pensize(1)
+            t.penup()
+            t.pendown()
+            t.setpos((i.x + t.pos()[0], i.y - t.pos()[1]))
+            t.pensize(10)
+            t.forward(i.width)
+            t.left(90)
+            t.forward(i.height)
+            t.left(90)
+            t.forward(i.width)
+            t.left(90)
+            t.forward(i.height)
+            t.left(90)
+            t.end_fill()
+
+        time.sleep(5)
