@@ -10,14 +10,14 @@ test with the command python3 -m doctest -v ./tests/100-matrix_mul.txt
 SUCCESS CASES:
 
 
-Test multiplying two 2x2 matrices
+Test with 2x2 matrices multiplication:
 
 >>> matrix_mul([[1, 2], [3, 4]], [[5, 6], [7, 8]])
 [[19, 22], [43, 50]]
 
 
 
-Test multiplying a 2x3 matrix by a 3x2 matrix
+Test with 2x3 and 3x2 matrices multiplication:
 
 >>> matrix_mul([[1, 2, 3], [4, 5, 6]], [[1, 2], [3, 4], [5, 6]])
 [[22, 28], [49, 64]]
@@ -29,12 +29,16 @@ Test multiplying a 2x3 matrix by a 3x2 matrix
 CASES ON FAILURE:
 
 
-Test with non-list inputs
+Attempt to multiply when first matrix is not a list:
 
 >>> matrix_mul("not a list", [[1, 2], [3, 4]])
 Traceback (most recent call last):
 ...
 TypeError: m_a must be a list
+
+
+
+Attempt to multiply when second matrix is not a list:
 
 >>> matrix_mul([[1, 2], [3, 4]], "not a list")
 Traceback (most recent call last):
@@ -43,12 +47,16 @@ TypeError: m_b must be a list
 
 
 
-Test with lists of non-lists
+Attempt to multiply when first matrix is not a list of lists:
 
 >>> matrix_mul([1, 2, 3], [[1, 2], [3, 4]])
 Traceback (most recent call last):
 ...
 TypeError: m_a must be a list of lists
+
+
+
+Attempt to multiply when second matrix is not a list of lists:
 
 >>> matrix_mul([[1, 2], [3, 4]], [1, 2, 3])
 Traceback (most recent call last):
@@ -57,12 +65,16 @@ TypeError: m_b must be a list of lists
 
 
 
-Test with empty matrices
+Attempt to multiply with an empty first matrix:
 
 >>> matrix_mul([], [[1, 2], [3, 4]])
 Traceback (most recent call last):
 ...
 ValueError: m_a can't be empty
+
+
+
+Attempt to multiply with an empty second matrix:
 
 >>> matrix_mul([[1, 2], [3, 4]], [])
 Traceback (most recent call last):
@@ -71,12 +83,16 @@ ValueError: m_b can't be empty
 
 
 
-Test with matrices containing non-numeric values
+Attempt to multiply when first matrix contains non-numeric elements:
 
 >>> matrix_mul([["not", "numbers"], [3, 4]], [[1, 2], [3, 4]])
 Traceback (most recent call last):
 ...
 TypeError: m_a should contain only integers or floats
+
+
+
+Attempt to multiply when second matrix contains non-numeric elements:
 
 >>> matrix_mul([[1, 2], [3, 4]], [["not", "numbers"], [3, 4]])
 Traceback (most recent call last):
@@ -85,12 +101,16 @@ TypeError: m_b should contain only integers or floats
 
 
 
-Test with rows of different sizes
+Attempt to multiply when rows in first matrix are not of the same size:
 
 >>> matrix_mul([[1, 2, 3], [4, 5]], [[1, 2], [3, 4]])
 Traceback (most recent call last):
 ...
 TypeError: each row of m_a must be of the same size
+
+
+
+Attempt to multiply when rows in second matrix are not of the same size:
 
 >>> matrix_mul([[1, 2], [3, 4]], [[1, 2, 3], [4, 5]])
 Traceback (most recent call last):
@@ -99,7 +119,7 @@ TypeError: each row of m_b must be of the same size
 
 
 
-Test with incompatible matrices for multiplication
+Attempt to multiply matrices that do not conform to multiplication rules:
 
 >>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4], [5, 6]])
 Traceback (most recent call last):

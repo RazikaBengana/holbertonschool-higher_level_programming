@@ -10,7 +10,7 @@ test with the command python3 -m doctest -v ./tests/3-say_my_name.txt
 SUCCESS CASES:
 
 
-Test for the 2 arguments given:
+Test with valid first and last names:
 
 >>> say_my_name("First name", "Last name")
 My name is First name Last name
@@ -22,12 +22,16 @@ My name is First name Last name
 CASES ON FAILURE:
 
 
-Test with 1 argument not a string:
+Attempt to use a number as the first name:
 
 >>> say_my_name(12345, "Razika")
 Traceback (most recent call last):
 ...
 TypeError: first_name must be a string
+
+
+
+Attempt to use a number as the last name:
 
 >>> say_my_name("Razika", 3)
 Traceback (most recent call last):
@@ -36,7 +40,7 @@ TypeError: last_name must be a string
 
 
 
-Test with more arguments than required:
+Attempt to provide more than the expected number of arguments:
 
 >>> say_my_name("Razika", "school", "Hello")
 Traceback (most recent call last):
@@ -45,12 +49,16 @@ TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
 
 
 
-Test with no argument:
+Attempt to call the function without any arguments:
 
 >>> say_my_name()
 Traceback (most recent call last):
 ...
 TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+
+
+Attempt to use `None` as the first name:
 
 >>> say_my_name(None)
 Traceback (most recent call last):

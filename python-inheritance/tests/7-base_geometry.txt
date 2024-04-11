@@ -10,7 +10,7 @@ test with the command python3 -m doctest -v ./tests/7-base_geometry.txt
 SUCCESS CASES:
 
 
-Test with integer:
+Attempt to create a BaseGeometry instance and validate a correct integer:
 
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("int", 3)
@@ -22,7 +22,7 @@ Test with integer:
 CASES ON FAILURE:
 
 
-Test with a negative value:
+Attempt to validate a negative integer, which should fail:
 
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("int", -4)
@@ -32,7 +32,7 @@ ValueError: int must be greater than 0
 
 
 
-Test with a float value:
+Attempt to validate a float, expecting an integer type, which should fail:
 
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("float", 5.85)
@@ -42,7 +42,7 @@ TypeError: float must be an integer
 
 
 
-Test with 1 argument:
+Attempt to call integer_validator without a value argument, which should fail:
 
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("int")
@@ -52,7 +52,7 @@ TypeError: integer_validator() missing 1 required positional argument: 'value'
 
 
 
-Test with no argument:
+Attempt to call integer_validator without any arguments, which should fail:
 
 >>> bg = BaseGeometry()
 >>> bg.integer_validator()
@@ -62,7 +62,7 @@ TypeError: integer_validator() missing 2 required positional arguments: 'name' a
 
 
 
-Test with None:
+Attempt to validate None as an integer, which should fail:
 
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("none", None)
@@ -72,7 +72,7 @@ TypeError: none must be an integer
 
 
 
-Test with a string:
+Attempt to validate a string as an integer, which should fail:
 
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("string", "hello")
@@ -82,7 +82,8 @@ TypeError: string must be an integer
 
 
 
-Test with more than 2 arguments:
+Attempt to call integer_validator with extra arguments, which should fail:
+
 >>> bg.integer_validator("int", 3, 5)
 Traceback (most recent call last):
 ...
@@ -90,7 +91,7 @@ TypeError: integer_validator() takes 3 positional arguments but 4 were given
 
 
 
-Test area:
+Attempt to call an unimplemented method 'area', which should raise an exception:
 
 >>> bg = BaseGeometry()
 >>> bg.area()
@@ -100,7 +101,7 @@ Exception: area() is not implemented
 
 
 
-Test with zero as value:
+Attempt to validate zero, expecting a positive integer, which should fail:
 
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("age", 0)
@@ -110,7 +111,7 @@ ValueError: age must be greater than 0
 
 
 
-Test with a list:
+Attempt to validate a list as an integer, which should fail:
 
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("list", [1, 2, 3])
@@ -120,7 +121,7 @@ TypeError: list must be an integer
 
 
 
-Test with a tuple:
+Attempt to validate a tuple as an integer, which should fail:
 
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("tuple", (1, 2))
@@ -130,7 +131,7 @@ TypeError: tuple must be an integer
 
 
 
-Test with a dict:
+Attempt to validate a set as an integer with a key 'age', which should fail:
 
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("age", {1, 2})
@@ -140,7 +141,7 @@ TypeError: age must be an integer
 
 
 
-Test with True:
+Attempt to validate a boolean as an integer, which should fail:
 
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("age", True)

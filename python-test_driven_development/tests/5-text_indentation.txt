@@ -10,7 +10,7 @@ test with the command python3 -m doctest -v ./tests/5-text_indentation.txt
 SUCCESS CASES:
 
 
-Test string
+Test the handling of punctuation that should trigger new lines:
 
 >>> text_indentation("Hi everyone? This is: an exercise made with Python")
 Hi everyone?
@@ -18,6 +18,10 @@ Hi everyone?
 This is:
 <BLANKLINE>
 an exercise made with Python
+
+
+
+Test with a simple input string without punctuation that triggers new lines:
 
 >>> text_indentation("School")
 School
@@ -29,7 +33,7 @@ School
 CASES ON FAILURE:
 
 
-Test with no text
+Attempt to test with no arguments provided:
 
 >>> text_indentation()
 Traceback (most recent call last):
@@ -37,6 +41,8 @@ Traceback (most recent call last):
 TypeError: text_indentation() missing 1 required positional argument: 'text'
 
 
+
+Attempt to test with a numeric input instead of a string:
 
 >>> text_indentation(1234)
 Traceback (most recent call last):

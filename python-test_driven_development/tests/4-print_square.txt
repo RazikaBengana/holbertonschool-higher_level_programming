@@ -10,9 +10,13 @@ test with the command python3 -m doctest -v ./tests/4-print_square.txt
 SUCCESS CASES:
 
 
-Test with size as integer and > 0
+Test with zero size (should print nothing):
 
 >>> print_square(0)
+
+
+
+Test with size 5:
 
 >>> print_square(5)
 #####
@@ -20,6 +24,10 @@ Test with size as integer and > 0
 #####
 #####
 #####
+
+
+
+Test with size 1:
 
 >>> print_square(1)
 #
@@ -31,7 +39,7 @@ Test with size as integer and > 0
 CASES ON FAILURE:
 
 
-Test with size < 0
+Attempt to test with negative size:
 
 >>> print_square(-1)
 Traceback (most recent call last):
@@ -40,12 +48,16 @@ ValueError: size must be >= 0
 
 
 
-Test with another type than int
+Attempt to test with a non-integer type 'string':
 
 >>> print_square("C")
 Traceback (most recent call last):
 ...
 TypeError: size must be an integer
+
+
+
+Attempt to test with a non-integer type 'float':
 
 >>> print_square(5.2)
 Traceback (most recent call last):
@@ -54,7 +66,7 @@ TypeError: size must be an integer
 
 
 
-Test with no argument
+Attempt to call function without arguments:
 
 >>> print_square()
 Traceback (most recent call last):
@@ -63,7 +75,7 @@ TypeError: print_square() missing 1 required positional argument: 'size'
 
 
 
-Test with more arguments than required:
+Attempt to call function with two arguments:
 
 >>> print_square(3, 9)
 Traceback (most recent call last):

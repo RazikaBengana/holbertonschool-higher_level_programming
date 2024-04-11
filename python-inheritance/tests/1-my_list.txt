@@ -10,7 +10,7 @@ test with the command python3 -m doctest -v ./tests/1-my_list.txt
 SUCCESS CASES:
 
 
-Try to append integers in list:
+Append integers and print sorted list:
 
 >>> my_list = MyList()
 >>> my_list.append(1)
@@ -24,7 +24,7 @@ Try to append integers in list:
 
 
 
-Try to append negative numbers in list:
+Include negative integer and print sorted list:
 
 >>> my_list = MyList()
 >>> my_list.append(1)
@@ -35,7 +35,7 @@ Try to append negative numbers in list:
 
 
 
-Try with just one element to print:
+Single element list:
 
 >>> my_list = MyList()
 >>> my_list.append(700)
@@ -44,7 +44,7 @@ Try with just one element to print:
 
 
 
-Try to print an empty list:
+Print an empty list:
 
 >>> my_list = MyList()
 >>> my_list.print_sorted()
@@ -52,7 +52,7 @@ Try to print an empty list:
 
 
 
-Check if the function returns a new list:
+Unsorted list verification:
 
 >>> my_list = MyList()
 >>> my_list.append(9)
@@ -70,7 +70,7 @@ Check if the function returns a new list:
 CASES ON FAILURE:
 
 
-Try to append a string in list:
+Attempt to append a non-integer, which should fail:
 
 >>> my_list = MyList()
 >>> my_list.append(7)

@@ -10,17 +10,35 @@ test with the command python3 -m doctest -v ./tests/2-matrix_divided.txt
 SUCCESS CASES:
 
 
+Divide each element of a 2x3 matrix by 2:
+
 >>> matrix_divided([[1, 2, 3], [3, 4, 6]], 2)
 [[0.5, 1.0, 1.5], [1.5, 2.0, 3.0]]
+
+
+
+Divide each element of a 2x2 matrix by 3:
 
 >>> matrix_divided([[3, 6], [2, 4]], 3)
 [[1.0, 2.0], [0.67, 1.33]]
 
+
+
+Divide a matrix containing infinity by 2:
+
 >>> matrix_divided([[float('inf'), 2, 4], [3, 2, 6]], 2)
 [[inf, 1.0, 2.0], [1.5, 1.0, 3.0]]
 
+
+
+Divide each element of a 2x3 matrix by infinity:
+
 >>> matrix_divided([[2, 3, 7], [3, 6, 7]], float('inf'))
 [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+
+
+Divide each element of a 2x3 matrix by NaN:
 
 >>> matrix_divided([[2, 3, 4], [4, 5, 6]], float('nan'))
 [[nan, nan, nan], [nan, nan, nan]]
@@ -32,27 +50,43 @@ SUCCESS CASES:
 CASES ON FAILURE:
 
 
-Test for matrix not a list of lists of integers or floats
+Attempt to divide when the input is not a matrix (list of lists):
 
 >>> matrix_divided([2, 1], 5)
 Traceback (most recent call last):
 ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
+
+
+Attempt to divide an empty matrix:
+
 >>> matrix_divided([], 9)
 Traceback (most recent call last):
 ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+
+Attempt to divide a matrix with an empty row:
 
 >>> matrix_divided([[]], 1)
 Traceback (most recent call last):
 ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
+
+
+Attempt to divide a matrix containing a non-numeric string row:
+
 >>> matrix_divided([[7, 8, 9], [1, 2, 3], "you"], 6)
 Traceback (most recent call last):
 ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+
+Attempt to divide a matrix with rows of strings instead of numbers:
 
 >>> matrix_divided([[1, 2, 3], ["4", "5", "6"]], 2)
 Traceback (most recent call last):
@@ -61,7 +95,7 @@ TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 
 
-Test for rows of the matrix not at the same size
+Attempt to divide a matrix with uneven row lengths:
 
 >>> matrix_divided([[2, 3, 4], [2]], 1)
 Traceback (most recent call last):
@@ -70,7 +104,7 @@ TypeError: Each row of the matrix must have the same size
 
 
 
-Test for div not a number
+Attempt to use a non-numeric divisor:
 
 >>> matrix_divided([[4, 5, 7.5], [3, 8, 9]], "hello")
 Traceback (most recent call last):
@@ -79,7 +113,7 @@ TypeError: div must be a number
 
 
 
-Test for div equal to 0
+Attempt to divide by zero:
 
 >>> matrix_divided([[6, 7, 8], [6, 9, 7]], 0)
 Traceback (most recent call last):
@@ -88,7 +122,7 @@ ZeroDivisionError: division by zero
 
 
 
-Test for div not created
+Attempt to call the function without specifying the divisor:
 
 >>> matrix_divided([[2, 5, 7], [6, 7, 8]])
 Traceback (most recent call last):
@@ -97,7 +131,7 @@ TypeError: matrix_divided() missing 1 required positional argument: 'div'
 
 
 
-Test for matrix with no argument
+Attempt to call the function without any arguments:
 
 >>> matrix_divided()
 Traceback (most recent call last):

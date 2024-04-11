@@ -10,7 +10,7 @@ test with the command python3 -m doctest -v ./tests/100-lazy_matrix_mul.txt
 SUCCESS CASES:
 
 
-Test multiplication of two square matrices
+Test with multiplying two 2x2 matrices:
 
 >>> lazy_matrix_mul([[1, 2], [3, 4]], [[5, 6], [7, 8]])
 matrix([[19, 22],
@@ -18,7 +18,7 @@ matrix([[19, 22],
 
 
 
-Test multiplication of rectangular matrices
+Test  with multiplying a 2x3 matrix by a 3x2 matrix:
 
 >>> lazy_matrix_mul([[1, 2, 3], [4, 5, 6]], [[7, 8], [9, 10], [11, 12]])
 matrix([[ 58,  64],
@@ -31,7 +31,7 @@ matrix([[ 58,  64],
 CASES ON FAILURE:
 
 
-Test with scalar values
+Attempt to multiply a scalar by a matrix:
 
 >>> lazy_matrix_mul(1, [[1, 2], [3, 4]])
 Traceback (most recent call last):
@@ -40,7 +40,7 @@ TypeError: Scalar operands are not allowed, use '*' instead
 
 
 
-Test with non-rectangular matrices
+Attempt to multiply matrices of incompatible dimensions:
 
 >>> lazy_matrix_mul([[1, 2], [3, 4, 5]], [[5, 6], [7, 8]])
 Traceback (most recent call last):
@@ -49,7 +49,7 @@ ValueError: setting an array element with a sequence.
 
 
 
-Test with non-numeric values in matrices
+Attempt to multiply using a matrix containing a non-numeric type:
 
 >>> lazy_matrix_mul([["a", 2], [3, 4]], [[5, 6], [7, 8]])
 Traceback (most recent call last):
@@ -58,7 +58,7 @@ TypeError: invalid data type for einsum
 
 
 
-Test with one matrix empty
+Attempt to multiply using an empty matrix:
 
 >>> lazy_matrix_mul([], [[5, 6], [7, 8]])
 Traceback (most recent call last):
