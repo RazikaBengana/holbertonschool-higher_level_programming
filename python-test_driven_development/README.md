@@ -59,7 +59,7 @@ This project has been created by **[Holberton School](https://www.holbertonschoo
 
 <br>
 
-#### _Important notice on intranet checks for Python projects_
+#### :warning: _Important notice on intranet checks for Python projects_
 
 <br>
 
