@@ -1,7 +1,7 @@
 <div align="center">
 <br>
 
-![SQL_introduction.png](README-image/SQL_introduction.png)
+![Introduction.png](README-image/introduction.png)
 
 </div>
 
