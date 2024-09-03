@@ -48,7 +48,7 @@
 The programs showcase various functions like integer addition, matrix operations, text formatting, and name printing, each paired with comprehensive test cases that cover both normal usage and edge cases, demonstrating the practical application of test-driven development principles in Python.
 <br>
 <br>
-This project has been created by **[Holberton School](https://www.holbertonschool.com/about-holberton)** to enable every student to understand how Python language works.
+This project has been created by **[Holberton School](https://www.holbertonschool.com/about-holberton)** to enable every student to understand how `TDD` in Python language works.
 
 </div>
 
