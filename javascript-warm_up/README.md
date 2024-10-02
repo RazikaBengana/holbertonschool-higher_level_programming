@@ -49,7 +49,7 @@
 The programs range from simple syntax demonstrations, such as printing messages and performing string concatenation, to more complex tasks like factorial calculations, manipulating objects, and defining custom functions.
 <br>
 <br>
-This project has been created by **[Holberton School](https://www.holbertonschool.com/about-holberton)** to enable every student to understand how Javascript works.
+This project has been created by **[Holberton School](https://www.holbertonschool.com/about-holberton)** to enable every student to understand how Javascript language works.
 
 </div>
 
