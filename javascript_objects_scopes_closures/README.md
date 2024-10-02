@@ -1,6 +1,7 @@
 <div align="center">
 <br>
 
+
 ![Objects_scopes_closures.png](README-image/objects_scopes_closures.png)
 
 </div>
