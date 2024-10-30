@@ -113,7 +113,7 @@ This project has been created by **[Holberton School](https://www.holbertonschoo
 
 <!-- ------------------------------------------------------------------------------------------------- -->
 
-## :memo: Learning objectives
+## :memo: Learning Objectives
 
 <br>
 
@@ -191,7 +191,7 @@ General
 
 <br>
 
-```yaml
+```sql
 $ cat my_script.sql
 -- 3 first students in the Batch ID=3
 -- because Batch 3 is the best!
@@ -230,7 +230,7 @@ $
 
 <br>
 
-```yaml
+```sql
 $ sudo mysql
 Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 11
@@ -286,7 +286,7 @@ $
 
 <br>
 
-```yaml
+```bash
 $ echo "CREATE DATABASE hbtn_0d_tvshows;" | mysql -uroot -p
 Enter password: 
 $ curl "https://s3.eu-west-3.amazonaws.com/hbtn.intranet.project.files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql" -s | mysql -uroot -p hbtn_0d_tvshows
@@ -375,7 +375,7 @@ $
 
 <br>
 
-**${\color{blue}Razika \space Bengana}$**
+<img src="https://img.shields.io/badge/Razika%20Bengana-darkblue" alt="Razika Bengana" width="120">
 
 <br>
 <br>

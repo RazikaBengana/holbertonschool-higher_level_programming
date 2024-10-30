@@ -91,75 +91,26 @@ This project has been created by **[Holberton School](https://www.holbertonschoo
 
 <br>
 
-- Write the first class `Base`
-
-<br>
-
-- Write the class `Rectangle` that inherits from `Base`
-
-<br>
-
-- Update the class `Rectangle` by adding validation of all setter methods and instantiation (`id` excluded)
-
-<br>
-
-- Update the class `Rectangle` by adding the public method `def area(self):` that returns the area value of the `Rectangle` instance
-
-<br>
-
-- Update the class `Rectangle` by adding the public method `def display(self):` that prints in stdout the `Rectangle` instance with the character `#` (you don’t need to handle `x` and `y` here)
-
-<br>
-
-- Update the class `Rectangle` by overriding the `str` method so that it returns `[Rectangle]` instance
-
-<br>
-
-- Update the class `Rectangle` by improving the public method `def display(self):` to print in stdout the `Rectangle` instance with the character `#` by taking care of `x` and `y`
-
-<br>
-
-- Update the class `Rectangle` by adding the public method `def update(self, *args):` that assigns an argument to each attribute
-
-<br>
-
-- Update the class ``Rectangle`` by updating the public method `def update(self, *args):` by changing the prototype to `update(self, *args, kwargs)` that assigns a key/value argument to attributes
-
-<br>
-
-- Write the class `Square` that inherits from `Rectangle`
-
-<br>
-
-- Update the class `Square` by adding the public getter and setter `size`
-
-<br>
-
-- Update the class `Square` by adding the public method `def update(self, *args, kwargs)` that assigns attributes
-
-<br>
-
-- Update the class `Rectangle` by adding the public method `def to_dictionary(self):` that returns the dictionary representation of a `Rectangle`
-
-<br>
-
-- Update the class `Square` by adding the public method `def to_dictionary(self):` that returns the dictionary representation of a `Square`
-
-<br>
-
-- Update the class `Base` by adding the class method `def savetofile(cls, listobjs):` that writes the JSON string representation of `listobjs` to a file
-
-<br>
-
-- Update the class `Base` by adding the static method `def fromjsonstring(jsonstring):` that returns the list of the JSON string representation `jsonstring`
-
-<br>
-
-- Update the class `Base` by adding the class method `def create(cls, dictionary):` that returns an instance with all attributes already set
-
-<br>
-
-- Update the class `Base` by adding the class method `def loadfromfile(cls):` that returns a list of instances
+| Step | Description                                                                                                                                                                                                     |
+|------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1 | <br> Write the first class `Base` <br> <br>                                                                                                                                                                     |
+| 2 | <br> Write the class `Rectangle` that inherits from `Base` <br> <br>                                                                                                                                            |
+| 3 | <br> Update the class `Rectangle` by adding validation of all setter methods and instantiation (`id` excluded) <br> <br>                                                                                        |
+| 4 | <br> Update the class `Rectangle` by adding the public method `def area(self):` that returns the area value of the `Rectangle` instance <br> <br>                                                               |
+| 5 | <br> Update the class `Rectangle` by adding the public method `def display(self):` that prints in stdout the `Rectangle` instance with the character `#` (you don’t need to handle `x` and `y` here) <br> <br>  |
+| 6 | <br> Update the class `Rectangle` by overriding the `str` method so that it returns `[Rectangle]` instance <br> <br>                                                                                            |
+| 7 | <br> Update the class `Rectangle` by improving the public method `def display(self):` to print in stdout the `Rectangle` instance with the character `#` by taking care of `x` and `y` <br> <br>                |
+| 8 | <br> Update the class `Rectangle` by adding the public method `def update(self, *args):` that assigns an argument to each attribute <br> <br>                                                                   |
+| 9 | <br> Update the class `Rectangle` by updating the public method `def update(self, *args):` by changing the prototype to `update(self, *args, kwargs)` that assigns a key/value argument to attributes <br> <br> |
+| 10 | <br> Write the class `Square` that inherits from `Rectangle` <br> <br>                                                                                                                                          |
+| 11 | <br> Update the class `Square` by adding the public getter and setter `size` <br> <br>                                                                                                                          |
+| 12 | <br> Update the class `Square` by adding the public method `def update(self, *args, kwargs)` that assigns attributes <br> <br>                                                                                  |
+| 13 | <br> Update the class `Rectangle` by adding the public method `def to_dictionary(self):` that returns the dictionary representation of a `Rectangle` <br> <br>                                                  |
+| 14 | <br> Update the class `Square` by adding the public method `def to_dictionary(self):` that returns the dictionary representation of a `Square` <br> <br>                                                        |
+| 15 | <br> Update the class `Base` by adding the class method `def savetofile(cls, listobjs):` that writes the JSON string representation of `listobjs` to a file <br> <br>                                           |
+| 16 | <br> Update the class `Base` by adding the static method `def fromjsonstring(jsonstring):` that returns the list of the JSON string representation `jsonstring` <br> <br>                                       |
+| 17 | <br> Update the class `Base` by adding the class method `def create(cls, dictionary):` that returns an instance with all attributes already set <br> <br>                                                       |
+| 18 | <br> Update the class `Base` by adding the class method `def loadfromfile(cls):` that returns a list of instances <br> <br>                                                                                     |
 
 <br>
 <br>
@@ -217,7 +168,7 @@ This project has been created by **[Holberton School](https://www.holbertonschoo
 
 <!-- ------------------------------------------------------------------------------------------------- -->
 
-## :memo: Learning objectives
+## :memo: Learning Objectives
 
 <br>
 
@@ -341,7 +292,7 @@ Python Unit Tests
 
 <br>
 
-**${\color{blue}Razika \space Bengana}$**
+<img src="https://img.shields.io/badge/Razika%20Bengana-darkblue" alt="Razika Bengana" width="120">
 
 <br>
 <br>

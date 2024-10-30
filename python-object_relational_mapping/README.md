@@ -96,7 +96,7 @@ You will be able to change your storage easily without re-writing your entire pr
 
 <br>
 
-```yaml
+```python
 conn = MySQLdb.connect(host="localhost", port=3306, user="root", passwd="root", db="my_db", charset="utf8")
 cur = conn.cursor()
 cur.execute("SELECT * FROM states ORDER BY id ASC") # HERE I have to know SQL to grab all states in my database
@@ -114,7 +114,7 @@ conn.close()
 
 <br>
 
-```yaml
+```python
 engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format("root", "root", "my_db"), pool_pre_ping=True)
 Base.metadata.create_all(engine)
 
@@ -185,7 +185,7 @@ Please read tutorials and don’t read the entire documentation before starting,
 
 <!-- ------------------------------------------------------------------------------------------------- -->
 
-## :memo: Learning objectives
+## :memo: Learning Objectives
 
 <br>
 
@@ -408,7 +408,7 @@ moved in a future release.")
 
 <br>
 
-**${\color{blue}Razika \space Bengana}$**
+<img src="https://img.shields.io/badge/Razika%20Bengana-darkblue" alt="Razika Bengana" width="120">
 
 <br>
 <br>
