@@ -287,7 +287,7 @@ $
 
 <br>
 
-```yaml
+```sql
 $ sudo mysql
 Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 11
